@@ -1,0 +1,40 @@
+.header {
+    // 95% viewport height
+    height: 95vh;
+    background-image: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),
+        url(../img/hero.jpg);
+    background-size: cover;
+    // Image always stay at the top when resize the browser
+    background-position: top;
+    position: relative;
+
+    // Clip the image
+    // Reference: https://bennettfeely.com/clippy/
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    &__logo-box {
+        position: absolute;
+        // Based on the parent element (header) that specify relative position
+        top: 4rem;
+        left: 4rem;
+    }
+
+    &__logo {
+        height: 3.5rem;
+    }
+
+    &__text-box {
+        position: absolute;
+        // In relation to the parent element
+        top: 40%;
+        left: 50%;
+        // In relation to transform itself
+        transform: translate(-50%, -50%);
+    
+        text-align: center;
+    }
+}

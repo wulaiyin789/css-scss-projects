@@ -1,0 +1,35 @@
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    // font-size: 16px;
+    line-height: 1.7;
+    color: $color-grey-dark;
+    padding: 3rem;
+}
+
+.heading-primary {
+    color: $color-white;
+    text-transform: uppercase;
+
+    // To fix the slightly shaky issue in the animation (E.g, Move upward slightly
+    backface-visibility: hidden;
+
+    margin-bottom: 6rem;
+
+    &--main {
+        // Occupy the entire width that available and create line breaks
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 3.5rem;
+        animation: moveInLeft ease-out 1s;
+    }
+
+    &--sub {
+        display: block;
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 1.75rem;
+        animation: moveInRight ease-out 1s;
+    }
+}

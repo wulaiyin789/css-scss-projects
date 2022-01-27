@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+    // Start cleaning all the default margin
+    margin: 0;
+    padding: 0;
+    // Automatically inherit anything to border-box
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is
+    // Use rem for overall changing to maintain easily
+    font-size: 62.5%;
+}
+
+body {
+    // Change the box model so the border and margin no longer added
+    box-sizing: border-box;
+}
