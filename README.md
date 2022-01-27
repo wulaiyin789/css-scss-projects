@@ -1,8 +1,8 @@
 # Small projects created by HTML/CSS/SCSS
 
 Projects that are done development
-- [] Natours
-- [] Nexter
+- [ ] Natours
+- [ ] Nexter
 - [x] Trillo
 
 ----
