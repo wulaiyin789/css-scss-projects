@@ -1,5 +1,10 @@
 # Small projects created by HTML/CSS/SCSS
 
+Projects that are done development
+- [] Natours
+- [] Nexter
+- [x] Trillo
+
 ----
 ## What are these small projects?
 The projects are designed to practice and explore more about the advanced CSS/SCSS to create some spectacular projects by Grid/Flexbox.
