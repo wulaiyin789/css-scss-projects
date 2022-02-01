@@ -2,7 +2,7 @@
 
 Projects that are done development
 - [ ] Natours
-- [ ] Nexter
+- [x] Nexter
 - [x] Trillo
 
 ----
