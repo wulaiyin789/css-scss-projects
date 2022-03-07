@@ -1,16 +1,21 @@
 {
-  "name": "natours",
-  "version": "1.0.0",
-  "description": "Landing page for natours",
-  "main": "index.js",
-  "scripts": {
-    "compile:sass": "node-sass -w sass/main.scss css/style.css",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Peter Wu",
-  "license": "ISC",
-  "devDependencies": {
-    "node-sass": "^7.0.1"
-  },
-  "dependencies": {}
+    "name": "natours",
+    "version": "1.0.0",
+    "description": "Landing page for natours",
+    "main": "index.js",
+    "scripts": {
+        "compile:sass": "node-sass -w sass/main.scss css/style.css",
+        "dev": "live-server",
+        "start": "concurrently \"yarn compile:sass\" \"yarn dev\"",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Peter Wu",
+    "license": "ISC",
+    "devDependencies": {
+        "node-sass": "^7.0.1"
+    },
+    "dependencies": {
+        "@icon/linea-basic": "^1.0.0-alpha.4",
+        "concurrently": "^6.5.1"
+    }
 }

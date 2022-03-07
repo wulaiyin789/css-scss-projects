@@ -1,5 +1,7 @@
 // Pseudo-classes to style elements under a special condition
 .btn {
+
+    &,
     &:link,
     &:visited {
         text-transform: uppercase;
@@ -7,11 +9,15 @@
         padding: 1.5rem 4rem;
         // Fix the overlapping the elements
         display: inline-block;
-    
+
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
+
+        // Change for the button element
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
@@ -24,7 +30,9 @@
         }
     }
 
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-1rem);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
@@ -33,7 +41,7 @@
         // Always specify
         content: "";
         display: inline-block;
-    
+
         height: 100%;
         width: 100%;
         border-radius: 10rem;
@@ -41,21 +49,56 @@
         top: 0;
         left: 0;
         z-index: -1;
-    
+
         transition: all .4s;
     }
 
     &--white {
         background-color: $color-white;
-        color:$color-grey-dark;
+        color: $color-grey-dark-1;
 
         &::after {
             background-color: $color-white;
         }
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-primary;
+        }
+    }
+
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards;
+    }
+}
+
+.btn-text {
+
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        display: inline-block;
+        color: $color-primary;
+        text-decoration: none;
+        border-bottom: .1rem solid $color-primary;
+        padding: .3rem;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: .15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color: $color-black, $alpha: .15);
+        transform: translateY(0);
     }
 }
